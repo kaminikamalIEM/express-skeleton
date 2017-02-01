@@ -14,7 +14,10 @@ router.get('/list/:fname', function(req, res, next) {
 
 });
 
-
+router.get('/destroy', function(req, res){
+	req.session.destroy();
+	res.send("Successfully logged out");
+});
 router.get('/signup', signup.first);
 router.post('/admin_function', signup.second);
 router.get('/login', login.first);

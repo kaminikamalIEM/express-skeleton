@@ -20,8 +20,8 @@ module.exports = {
                  if(isMatch && !err){
                  	//handle sessions here
                  	req.session.name = val.email;
-                 	req.session.password = val.password;
-                 	req.session.logintime=moment().format('LLL');
+                 //	req.session.password = val.password;
+                 //	req.session.logintime=moment().format('LLL');
                  	console.log("Session here:-"+req.session.name+" "+req.session.logintime);
                  	      return res.json({error : false, name : req.session.name});
                  }
