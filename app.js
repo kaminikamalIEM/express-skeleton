@@ -5,7 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var session = require('express-session');
+var session = require('express-session');//managing sessions
 var mailer = require('express-mailer');
 // var helmet = require('helmet');
 
@@ -33,7 +33,6 @@ mailer.extend(app, {
 
 mongoose.Promise = global.Promise;
 mongoose.connect(config.database);
-
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
